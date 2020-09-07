@@ -26,7 +26,22 @@ def camel(sentence):
     except ValueError as err:
         return f"{type(err)}: invalid characters in \"{err}\""
 
+def banner():
+    #Displays a banner
+    message = """
+                          _ _____               ______                                    _ 
+                         | /  __ \              | ___ \                                  | |
+  ___ __ _ _ __ ___   ___| | /  \/ __ _ ___  ___| |_/ / __ ___   __ _ _ __ __ _ _ __ ___ | |
+ / __/ _` | '_ ` _ \ / _ \ | |    / _` / __|/ _ \  __/ '__/ _ \ / _` | '__/ _` | '_ ` _ \| |
+| (_| (_| | | | | | |  __/ | \__/\ (_| \__ \  __/ |  | | | (_) | (_| | | | (_| | | | | | |_|
+ \___\__,_|_| |_| |_|\___|_|\____/\__,_|___/\___\_|  |_|  \___/ \__, |_|  \__,_|_| |_| |_(_)
+                                                                 __/ |                      
+                                                                |___/  
+    """
+    return message
+
 if __name__ == "__main__":
+    print(banner())
     #User enters a sentence
     sentence = input("Please enter a sentence:\n").strip()
     print(camel(sentence))
