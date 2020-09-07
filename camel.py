@@ -40,8 +40,14 @@ def banner():
     """
     return message
 
+def instructions():
+    #Displays instructions
+    instructions = "Enter a sentence to convert it to camelCase. Do NOT enter any special characters."
+    return instructions
+
 if __name__ == "__main__":
     print(banner())
+    print(instructions())
     #User enters a sentence
     sentence = input("Please enter a sentence:\n").strip()
     print(camel(sentence))
